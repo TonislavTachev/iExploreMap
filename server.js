@@ -2,7 +2,16 @@ const express = require('express');
 const app = express();
 const mysql = require('mysql');
 const geocoder = require('geocoder');
+const dotenv = require('dotenv');
 const cors = require('cors');
+
+//referencing the index.html file
+app.use(express.static(__dirname + '/views'));
+app.use(cors());
+//referencing the style
+app.use(express.static(__dirname + '/public'));
+dotenv.config();
+
 
 var db = mysql.createPool({host: "swprodb.mysql.database.azure.com", user: "swprodb@swprodb",
  connectionLimit:10,
@@ -10,11 +19,6 @@ var db = mysql.createPool({host: "swprodb.mysql.database.azure.com", user: "swpr
  database: 'iexplore', 
  port: 3306, 
 });
-//referencing the index.html file
-app.use(express.static(__dirname + '/views'));
-app.use(cors());
-//referencing the style
-app.use(express.static(__dirname + '/public'));
 
 
 app.get("/coordinates", (req,res) =>{

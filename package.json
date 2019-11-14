@@ -13,6 +13,7 @@
   "dependencies": {
     "async": "^2.6.2",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "geocoder": "^0.2.3",
     "mysql": "git://github.com/mysqljs/mysql#e3e123e9af7c0829a6c1417d911572a75b4a5f95",
