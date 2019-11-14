@@ -112,10 +112,6 @@ app.get("/coordinates/company/location/latlng/:id", (req,res) =>{
 
 
 
-app.get("/", (req,res)=>{
-    res.render("index.html");
-})
-
 var PORT = process.env.PORT || 4000;
 
 app.listen(PORT, () => {

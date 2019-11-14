@@ -52,7 +52,7 @@ $('#document').ready(()=>{
  */
 //get all the events from the database
 getCoordinates = async() =>{
-    const coordinates = await $.get('http://localhost:4000/coordinates');
+    const coordinates = await $.get('https://iexploremap.herokuapp.com/coordinates');
    return coordinates.data;
 }
 
@@ -156,7 +156,7 @@ getFilterOptionsAndCoordinates =async(company, city) =>{
  */
 getLocationByCity =async(city) =>{
     try{
-  const coordinates = await $.get(`http://localhost:4000/coordinates/${city}`);
+  const coordinates = await $.get(`https://iexploremap.herokuapp.com/coordinates/${city}`);
   const data = coordinates.data;
    if(data[0].length <=0){
        return -1;
@@ -174,7 +174,7 @@ getLocationByCity =async(city) =>{
  */
 getLocationByCompany = async(company) =>{
     if(city){
-        const coordinates = await $.get(`http://localhost:4000/coordinates/company/${company}`);
+        const coordinates = await $.get(`https://iexploremap.herokuapp.com/coordinates/company/${company}`);
         const data = coordinates.data;
         
         //if there are no found events based on the criteria, return -1 and show an alertbox
@@ -196,7 +196,7 @@ getLocationByCompany = async(company) =>{
       //forward it to the setFilteredCompanyMarkers() function which is going to display them on the map
         data.map(async(location)=>{
     
-           var loc = await $.get(`http://localhost:4000/coordinates/company/location/latlng/${location.Id}`);
+           var loc = await $.get(`https://iexploremap.herokuapp.com/coordinates/company/location/latlng/${location.Id}`);
            setFilteredCompanyMarkers(loc.data, map, 1200);
         })
         //show the refresh button
@@ -378,7 +378,7 @@ setFilteredCompanyMarkers = async(coordinates, map, timeout) =>{
  */
 getContentString = async(loc) =>{
 
-    const loC = await $.get(`http://localhost:4000/${loc.EventID}`);
+    const loC = await $.get(`https://iexploremap.herokuapp.com/${loc.EventID}`);
     const location = loC.data;
      
     return contentString = '<div id="content">'+
