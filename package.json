@@ -1,0 +1,23 @@
+{
+  "name": "iexploremap",
+  "version": "1.0.0",
+  "description": "Getting location for the map",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "Tonislav Tachev",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^2.6.2",
+    "express": "^4.17.1",
+    "geocoder": "^0.2.3",
+    "mysql": "git://github.com/mysqljs/mysql#e3e123e9af7c0829a6c1417d911572a75b4a5f95",
+    "tedious": "^5.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}

@@ -1,0 +1,39 @@
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+#map {
+    height: 88%;
+  }
+  /* Optional: Makes the sample page fill the window. */
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.fa-sync{
+  color:black;
+}
+nav{
+  border-bottom:2px solid #ebf0f0;
+}
+
+#header{
+  font-size:1.5em;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+@media (min-width: 850px) { 
+  .filter{
+    width:10em !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+
+}
+
+

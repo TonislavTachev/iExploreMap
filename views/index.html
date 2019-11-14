@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/9f7859b06a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light p-4">
+  <a class="navbar-brand" href="#">iExplore</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li>
+    </ul>
+  </div> 
+ </nav>
+</section>
+<!-- Main  -->
+<section class="main my-4">
+   <div class="container">  
+    <div class="row">
+     <div class='col-md-4  text-center'>
+         <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="height:30em">
+                <div class="card-body">
+                  <p id='header'>Explore our excursions</p>
+                  <div class="alert alert-danger" role="alert">
+                     
+                    </div>
+                  <form>
+                    <fieldset>
+                      <div class="form-group mt-2">
+                            <input type="text" class="form-control" id="company" aria-describedby="emailHelp" placeholder="Search for excursions by company">
+                      </div>
+                      <div class="form-group mt-3">
+                            <input type="text" class="form-control" id="city" aria-describedby="emailHelp" placeholder="Search for excursions by city">
+                      </div>
+                    </fieldset>
+                  </form>
+                  <button type="submit" class="btn btn-primary btn-block" id="submitBtn">Search</button>
+                  <button type="refresh" class="btn btn-light btn-block" id="submitBtn">Refresh <span><i class="fas fa-sync"></i></span></button>
+                  <p class="card-text"></p>
+                </div>
+        </div>
+     </div>
+     <div class="col-md-8 d-flex justify-content-center">
+            <div class="card shadow-lg p-3 mb-5 bg-white rounded map" style="width: 45rem; height:30em">
+                    <div class="card-body">
+                      <p id='header'>Our Excursions</p>
+                
+                   <div id='map'></div>
+                      <p class="card-text"></p>
+                    </div>
+            </div>
+     </div>
+    </div>
+   </div>
+</section>
+    
+    <script src="scripts.js"></script>
+    <script>
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHtHOw6kHDqF_Exh2ktvyyQwmuYZ6ihi0&callback=initMap"
+      async defer></script>
+</body>
+</html>
