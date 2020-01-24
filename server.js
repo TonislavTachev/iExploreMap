@@ -13,7 +13,7 @@ app.use(express.static(__dirname + '/public'));
 dotenv.config();
 
 
-var db = mysql.createPool({host: "swprodb.mysql.database.azure.com", user: "swprodb@swprodb",
+var db = mysql.createPool({host: "swpro-db.mysql.database.azure.com", user: "swprodb@swpro-db",
  connectionLimit:10,
  password:'cts5-2019', 
  database: 'iexplore', 
